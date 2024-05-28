@@ -1,6 +1,7 @@
 * setup TeamView
 * DSA and Algo
 * Big O
+* Design Pattern  
 * leetcode 
 
 setup TeamViewer:  
@@ -14,6 +15,8 @@ https://www.programiz.com/dsa
 
 All You Need to Know About Big O Notation [Python Examples]  https://skerritt.blog/big-o/   
 Understanding time complexity with Python examples  https://towardsdatascience.com/understanding-time-complexity-with-python-examples-2bda6e8158a7  
+
+Python Design Patterns  https://www.geeksforgeeks.org/python-design-patterns/#  
 
 leecode  
 https://leetcode.com/problems/  
