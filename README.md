@@ -1,5 +1,6 @@
 * setup TeamView
 * DSA and Algo
+* Threading in Python
 * Big O
 * Design Pattern  
 * leetcode 
@@ -15,6 +16,10 @@ Algo  : DataStructure and Alog learn first  https://www.geeksforgeeks.org/learn-
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/dc775339-68e2-4caa-a57f-456801db9c2d)  
 
 https://www.programiz.com/dsa   
+
+-----
+An Intro to Threading in Python  
+https://realpython.com/intro-to-python-threading/  
 
 -----
 All You Need to Know About Big O Notation [Python Examples]  https://skerritt.blog/big-o/   
