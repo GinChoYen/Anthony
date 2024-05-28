@@ -3,7 +3,7 @@
 * Big O
 * Design Pattern  
 * leetcode 
-* Top 100 Data Structure and Algorithms DSA Interview Questions Topic-wise
+* Interview Questions
 
 -----  
 setup TeamViewer:  
