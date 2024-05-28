@@ -7,6 +7,8 @@ Algo  : DataStructure and Alog learn first  https://www.geeksforgeeks.org/learn-
 
 https://www.programiz.com/dsa   
 
+All You Need to Know About Big O Notation [Python Examples]  https://skerritt.blog/big-o/   
+
 leecode  
 https://leetcode.com/problems/  
 https://leetcode.cn/studyplan/top-100-liked/  
