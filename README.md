@@ -3,7 +3,7 @@
 * Big O
 * Design Pattern  
 * leetcode 
-* Top 100 Data Structure and Algorithms DSA Interview Questions Topic-wise  https://www.geeksforgeeks.org/top-100-data-structure-and-algorithms-dsa-interview-questions-topic-wise/?ref=outind#dsa-interview-questions-on-array  
+* Top 100 Data Structure and Algorithms DSA Interview Questions Topic-wise
 
 -----  
 setup TeamViewer:  
@@ -27,4 +27,8 @@ Python Design Patterns  https://www.geeksforgeeks.org/python-design-patterns/#
 leecode  
 https://leetcode.com/problems/  
 https://leetcode.cn/studyplan/top-100-liked/  
+
+-----
+interview DSA and Algo  
+https://www.geeksforgeeks.org/top-100-data-structure-and-algorithms-dsa-interview-questions-topic-wise/?ref=outind#dsa-interview-questions-on-array   
 
