@@ -5,11 +5,10 @@ Input: nums = [2,7,11,15], target = 9
 Output: [0,1]
 Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-ans: 
+ans:   
 from typing import List  
-
-class Solution:
-    # O(n^2)
+class Solution:  
+    # O(n^2)  
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         n = len(nums)
         for i in range(n - 1):
@@ -17,7 +16,7 @@ class Solution:
                 if nums[i] + nums[j] == target:
                     return [i, j]
         return []  # No solution found
-    # 2*O(n)
+    # 2*O(n)  
     def two_pass(self, nums: List[int], target: int) -> List[int]:
         numMap = {}
         n = len(nums)
@@ -33,7 +32,7 @@ class Solution:
                 return [i, numMap[complement]]
 
         return []  # No solution found
-    # O(n)
+    # O(n)  
     def onepass(self, nums: List[int], target: int) -> List[int]:
         numMap = {}
         n = len(nums)
