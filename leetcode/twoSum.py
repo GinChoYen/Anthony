@@ -9,7 +9,7 @@ class Solution:
                 if nums[i] + nums[j] == target:
                     return [i, j]
         return []  # No solution found
-    # 2*O(n)
+    # O(n)
     def two_pass(self, nums: List[int], target: int) -> List[int]:
         numMap = {}
         n = len(nums)
