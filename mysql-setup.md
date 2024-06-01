@@ -17,4 +17,6 @@ Install the MySQL Service:
   * Run the following command to install the MySQL service:  
 C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld --install
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/fc49b95c-9361-4c24-8bdf-ece1c08d4c78)  
+  * Start the MySQL Service:  
+Start the service using:  net start MySQL80 or use services.msc  
 
