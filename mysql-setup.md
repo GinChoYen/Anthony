@@ -14,7 +14,7 @@ Right-click on the service and select Start.
 3. install paht C:\Program Files\MySQL  
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/4031fa51-d76f-4c11-9b6b-e4710b03e6c1)
 Install the MySQL Service:  
--Run the following command to install the MySQL service:  
+  * Run the following command to install the MySQL service:  
 C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld --install
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/fc49b95c-9361-4c24-8bdf-ece1c08d4c78)  
 
