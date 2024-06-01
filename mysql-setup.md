@@ -10,3 +10,6 @@ Locate and Start the MySQL Service:
 2. Find the MySQL service in the list (e.g., MySQL80).  
 Right-click on the service and select Start.  
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/8807ad55-ab33-48ae-b9a5-aff30d901896)  
+
+3. install paht C:\Program Files\MySQL  
+![image](https://github.com/GinChoYen/Anthony/assets/22329486/4031fa51-d76f-4c11-9b6b-e4710b03e6c1)  
