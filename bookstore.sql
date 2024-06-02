@@ -33,6 +33,8 @@ The system would lose the ability to manage inventory accurately and ensure that
 Conclusion:
 Both foreign keys (list_id and book_id) are crucial for maintaining the integrity and functionality of the online bookstore shopping system. They ensure that order items are correctly linked to their respective orders and books, enabling efficient order management, inventory control, and data consistency. Removing either foreign key would disrupt these relationships, leading to significant challenges in the system’s operation and reliability.
 
+---
+    
 DROP SCHEMA IF EXISTS bookstore;
 CREATE SCHEMA bookstore;
 use bookstore;
