@@ -4,11 +4,13 @@ Explanation of Foreign Keys in order_item:
 list_id Foreign Key:
 
 Purpose: This foreign key references the list_id in the order_list table.
-Reason: It links each order item to a specific order, allowing the system to track which items belong to which orders. This relationship is essential for aggregating all items under a single order and for maintaining order details.
+Reason: It links each order item to a specific order, allowing the system to track which items belong to which orders. 
+    This relationship is essential for aggregating all items under a single order and for maintaining order details.
 book_id Foreign Key:
 
 Purpose: This foreign key references the book_id in the book table.
-Reason: It links each order item to a specific book. This relationship ensures that each item in an order corresponds to an actual book in the inventory, allowing the system to manage and update stock levels, track book sales, and retrieve book details for each order.
+Reason: It links each order item to a specific book. This relationship ensures that each item 
+    in an order corresponds to an actual book in the inventory, allowing the system to manage and update stock levels, track book sales, and retrieve book details for each order.
 Implications of Removing a Foreign Key:
 Removing list_id Foreign Key:
 Impact:
@@ -31,7 +33,9 @@ Result:
 The relationship between book and order_item would be broken, leading to orphaned records in the order_item table.
 The system would lose the ability to manage inventory accurately and ensure that ordered items correspond to actual books in stock.
 Conclusion:
-Both foreign keys (list_id and book_id) are crucial for maintaining the integrity and functionality of the online bookstore shopping system. They ensure that order items are correctly linked to their respective orders and books, enabling efficient order management, inventory control, and data consistency. Removing either foreign key would disrupt these relationships, leading to significant challenges in the system’s operation and reliability.
+Both foreign keys (list_id and book_id) are crucial for maintaining the integrity and functionality of the online bookstore shopping system. 
+    They ensure that order items are correctly linked to their respective orders and books, enabling efficient order management, inventory control, 
+    and data consistency. Removing either foreign key would disrupt these relationships, leading to significant challenges in the system’s operation and reliability.
 
 -------------------------------------------------------------------------------
     
