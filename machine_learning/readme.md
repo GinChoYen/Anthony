@@ -2,7 +2,7 @@ Machine Learning Tutorial:  https://www.geeksforgeeks.org/machine-learning/
 
 
 
-
+----- 
 https://github.com/Forcrush/Stock_Data_Analysis  
 
 This is a course project for Thinking and Approach of Programming, sjtu, 2019 S, including a Python application and a html file for pricing European, American, and Asian options based on Black-Scholes model and Monte Carlo simulation. https://github.com/hya-cala/Option-Price-Calculator/tree/main  
