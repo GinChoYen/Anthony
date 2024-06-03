@@ -4,6 +4,7 @@ machine learning study plan:
 3. Hands-on Transformers (BERT), LSTMs, LLMs (llama)
 
 ---
+1. Learn about NLP  
 Machine Learning Tutorial:  https://www.geeksforgeeks.org/machine-learning/    
 A Step-by-Step NLP Machine Learning Classifier Tutorial  https://builtin.com/machine-learning/nlp-machine-learning  
 (github) Natural-Language-Processing-NLP-for-Machine-Learning  https://github.com/BadreeshShetty/Natural-Language-Processing-NLP-for-Machine-Learning  
