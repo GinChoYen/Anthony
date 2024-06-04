@@ -2,7 +2,7 @@ machine learning study plan:
 1. Learn about NLP  
 2. Learn about Transformers, LSTMs, LLMs  
 3. Hands-on Transformers (BERT), LSTMs, LLMs (llama)  
-Transformer: 
+Transformer:  
 The Transformer is a deep learning model for predicting sequential data that was introduced by Vaswani et al  
 LLM:  
 Large language models largely represent a class of deep learning architectures called transformer networks.  
