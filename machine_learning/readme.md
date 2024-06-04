@@ -4,7 +4,7 @@ machine learning study plan:
 3. Hands-on Transformers (BERT), LSTMs, LLMs (llama)
 * Transformer:  
 The Transformer is a deep learning model for predicting sequential data that was introduced by Vaswani et al
-* Bert:
+* Bert:  
 BERT, which stands for Bidirectional Encoder Representations from Transformers, is based on transformers, a deep learning model in which every output element is connected to every input element, and the weightings between them are dynamically calculated based upon their connection.
 * LSTM:  
 Long short-term memory (LSTM) is a type of recurrent neural network (RNN) aimed at dealing with the vanishing gradient problem present in traditional RNNs. Its relative insensitivity to gap length is its advantage over other RNNs, hidden Markov models and other sequence learning methods.  
