@@ -2,6 +2,9 @@ machine learning study plan:
 1. Learn about NLP
 2. Learn about Transformers, LSTMs, LLMs
 3. Hands-on Transformers (BERT), LSTMs, LLMs (llama)
+LLM:  
+Large language models largely represent a class of deep learning architectures called transformer networks.  
+A transformer model is a neural network that learns context and meaning by tracking relationships in sequential data, like the words in this sentence.
 
 ---
 1. Learn about NLP  
