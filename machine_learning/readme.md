@@ -8,10 +8,10 @@ The Transformer is a deep learning model for predicting sequential data that was
 BERT, which stands for Bidirectional Encoder Representations from Transformers, is based on transformers, a deep learning model in which every output element is connected to every input element, and the weightings between them are dynamically calculated based upon their connection.
 * LSTM:  
 Long short-term memory (LSTM) is a type of recurrent neural network (RNN) aimed at dealing with the vanishing gradient problem present in traditional RNNs. Its relative insensitivity to gap length is its advantage over other RNNs, hidden Markov models and other sequence learning methods.  
-* LLM: 
+* LLM:  
 Large language models largely represent a class of deep learning architectures called transformer networks.  
 A transformer model is a neural network that learns context and meaning by tracking relationships in sequential data, like the words in this sentence.
-* Llama (language model): 
+* Llama (language model):  
 Llama is a family of autoregressive large language models released by Meta AI starting in February 2023.  
 
 ---
