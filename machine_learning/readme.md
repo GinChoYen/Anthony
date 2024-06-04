@@ -1,10 +1,12 @@
 machine learning study plan:   
 1. Learn about NLP  
 2. Learn about Transformers, LSTMs, LLMs  
-3. Hands-on Transformers (BERT), LSTMs, LLMs (llama)  
-Transformer:  
+3. Hands-on Transformers (BERT), LSTMs, LLMs (llama)
+* Transformer:  
 The Transformer is a deep learning model for predicting sequential data that was introduced by Vaswani et al  
-LLM:  
+* LSTM:  
+Long short-term memory (LSTM) is a type of recurrent neural network (RNN) aimed at dealing with the vanishing gradient problem present in traditional RNNs. Its relative insensitivity to gap length is its advantage over other RNNs, hidden Markov models and other sequence learning methods.  
+* LLM: 
 Large language models largely represent a class of deep learning architectures called transformer networks.  
 A transformer model is a neural network that learns context and meaning by tracking relationships in sequential data, like the words in this sentence.
 
