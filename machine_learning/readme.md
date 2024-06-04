@@ -1,3 +1,8 @@
+Kaggle codebase:  https://www.kaggle.com/models?tfhub-redirect=true&query=bert  
+![image](https://github.com/GinChoYen/Anthony/assets/22329486/e6f10d68-8f08-4bac-a078-938bac844684)  
+
+---
+
 machine learning study plan:   
 1. Learn about NLP  
 2. Learn about Transformers, LSTMs, LLMs  
