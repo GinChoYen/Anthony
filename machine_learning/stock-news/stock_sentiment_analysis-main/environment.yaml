@@ -1,0 +1,35 @@
+name: stock
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - conda
+  - python=3.9
+  - jupyterlab
+  - pandas
+  - black
+  - requests
+  - pip
+  - matplotlib
+  - jupyter-lsp-python
+  - jupyterlab-lsp
+  - jupyterlab-spellchecker
+  - jupyterlab-git
+  - jupyterlab_code_formatter
+  - altair
+  - vega_datasets
+  - ipykernel
+  - altair_saver
+  - nb_conda_kernels
+  - scikit-learn[version='>=1.0']
+  - docopt
+  - altair_saver
+  - nltk
+  - pip:
+    - beautifulsoup4
+    - urllib3
+    - lxml
+    - yfinance
+    - pandas_datareader
+    - plotly
+
