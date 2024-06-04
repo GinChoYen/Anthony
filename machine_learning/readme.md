@@ -11,6 +11,8 @@ Long short-term memory (LSTM) is a type of recurrent neural network (RNN) aimed 
 * LLM: 
 Large language models largely represent a class of deep learning architectures called transformer networks.  
 A transformer model is a neural network that learns context and meaning by tracking relationships in sequential data, like the words in this sentence.
+* Llama (language model): 
+Llama is a family of autoregressive large language models released by Meta AI starting in February 2023.  
 
 ---
 1. Learn about NLP  
