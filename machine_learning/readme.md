@@ -31,7 +31,9 @@ Llama is a family of autoregressive large language models released by Meta AI st
 1. Learn about NLP  
 Machine Learning Tutorial:  https://www.geeksforgeeks.org/machine-learning/    
 A Step-by-Step NLP Machine Learning Classifier Tutorial  https://builtin.com/machine-learning/nlp-machine-learning  
-(github) Natural-Language-Processing-NLP-for-Machine-Learning  https://github.com/BadreeshShetty/Natural-Language-Processing-NLP-for-Machine-Learning  
+(github) Natural-Language-Processing-NLP-for-Machine-Learning  https://github.com/BadreeshShetty/Natural-Language-Processing-NLP-for-Machine-Learning
+place break point and debug cell  
+![image](https://github.com/GinChoYen/Anthony/assets/22329486/bc6bbe17-1a03-4e0c-a6cb-ac8dabdd09e8)
 
 
 ----- 
