@@ -1,3 +1,7 @@
+DAIR.AI  
+Democratizing Artificial Intelligence Research, Education, and Technologies  https://github.com/dair-ai   
+
+---
 Kaggle codebase:  https://www.kaggle.com/models?tfhub-redirect=true&query=bert  
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/e6f10d68-8f08-4bac-a078-938bac844684)  
 
