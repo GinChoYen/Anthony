@@ -1,5 +1,8 @@
 DAIR.AI  
 Democratizing Artificial Intelligence Research, Education, and Technologies  https://github.com/dair-ai   
+ML Papers of The Week:   https://github.com/dair-ai/ML-Papers-of-the-Week      
+Machine Learning Course Notes:  https://github.com/dair-ai/ML-Course-Notes  
+ML-YouTube-Courses:  https://github.com/dair-ai/ML-YouTube-Courses     
 
 ---
 Kaggle codebase:  https://www.kaggle.com/models?tfhub-redirect=true&query=bert  
