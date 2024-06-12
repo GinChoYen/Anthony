@@ -1,0 +1,291 @@
+%-------------------------
+% Resume in Latex
+% Author : Victor Quach
+% Adapted from: Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[utf8]{inputenc} % usually not needed (loaded by default)
+\usepackage[T1]{fontenc}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex, hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+
+% \usepackage[a4paper,bindingoffset=0.0in,%
+            % left=0.5in,right=0.5in,top=0.2in,bottom=0.2in,%
+            % footskip=.25in]{geometry}
+
+
+\usepackage[charter]{mathdesign} % Bitstream Charter
+% \usepackage{newpxtext,newpxmath} % Palatino
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.50in}
+\addtolength{\evensidemargin}{-0.50in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemNoBullet}[2]{
+  \item[]\small{
+    \hspace{-9pt}\textbf{#1}{: #2 \vspace{-6pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item[]
+  \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      \hspace{-10pt}\textbf{#1} & #2 \\
+      \hspace{-10pt}\textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% custom commands
+\newcommand{\shorterSection}[1]{\vspace{-10pt}\section{#1}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+  \small{
+  \textbf{\href{}{\huge Victor Quach}} \\
+  \vspace{5pt}
+  \href{mailto:victor.quach@m4x.org}{\color{blue}\underline{victor.quach@m4x.org}} $\vert$
+  857-829-7139 $\vert$
+  LinkedIn: \href{https://www.linkedin.com/in/victor-quach-ab90a584/}{\color{blue}\underline{victor-quach-ab90a584}} $\vert$
+  Github: \href{https://github.com/varal7}{\color{blue}\underline{varal7}}
+}
+
+\end{center}
+
+% \begin{center}
+%   Looking for an internship, summer 2022
+% \end{center}
+
+
+%-----------EDUCATION-----------------
+\shorterSection{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Massachusetts Institute of Technology (MIT)}{Cambridge, MA}
+      {\shortstack[l]{
+        PhD in Computer Science;  GPA: 5.0/5.0
+        %\\ PhD student in Computer Science
+      }
+      }
+      {\shortstack[r]{
+          Sep 2017 - Jun 2023
+        %\\  Sep 2017 - Ongoing
+        }
+      }
+      {
+      \vspace{-6pt}
+      % \resumeItemNoBullet{\quad Thesis}{Automatic Program Repair with Natural Language Hints}
+      \resumeItemNoBullet{\quad Thesis Title}{Generative Modeling with Guarantees}
+    }
+    \vspace{2pt}
+    \resumeSubheading
+      {École polytechnique}{Palaiseau, France}
+      {\shortstack[l]{
+        Master's degree in Computer Science and Mathematics; GPA: 3.93/4.0; Rank: 21/511 \\
+        Bachelor of Science in Engineering; GPA: 3.92/4.0}
+      }
+      {\shortstack[r]{
+        Sep 2016 - Aug 2017 \\
+        Sep 2014 - Aug 2016}
+      }
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\shorterSection{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Algorithm Developer}{NYC, NY}
+      {Hudson River Trading}{Aug 2023 - Present}
+      \resumeItemListStart
+          \item \small Quant Research
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant}{Cambridge, MA}
+      {MIT Computer Science and Artificial Intelligence Laboratory (MIT CSAIL) - Regina Barzilay group}{Sep 2017 - Jun 2023}
+      \resumeItemListStart
+      \item \small Thesis work on \textbf{generative modeling with guarantees}.
+      \item \small Reviewed background work and designed new methods for \textbf{NLP} (language models, multi-task learning, representation learning, semi-supervised learning), \textbf{automatic program repair} (graph neural networks), \textbf{computational chemistry} (molecular property prediction, drug design), \textbf{privacy-preserving ML} and \textbf{conformal language modeling}.
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Algorithm Developer Intern}{NYC, NY}
+      {Hudson River Trading}{May 2022 - Aug 2022}
+      \resumeItemListStart
+          \item \small Quant Research for Retail Market Making.
+          \item \small Alpha and Order Execution Research for High Frequency Trading.
+      \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Software Engineering Intern}{Cambridge, MA}
+      {Facebook - PyTorch Core Team}{Jun 2021 - Aug 2021}
+      \resumeItemListStart
+          \item \small Improved performance of the PyTorch autograd engine by 16\%.
+          \item \small Developed an API for users to register saved tensor hooks reducing memory usage from $O(n)$ to $O(1)$ at the cost of a 5x slowdown.
+      \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Research Intern}{Cambridge, MA}
+      {IBM Research}{Jun 2020 - Aug 2020}
+      \resumeItemListStart
+        \item \small Developed a novel training scheme to improve generalizability of Transformers beyond the maximum length of their training data. Applications to question answering with long context.
+      \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Teaching assistant}{Cambridge, MA}
+      {MIT Department of Electrical Engineering and Computer Science (MIT EECS)}{Jan 2019 - Aug 2019}
+      \resumeItemListStart
+      \resumeItem{6.86x/6.883 Machine Learning with Python: from Linear Models to Deep Learning}{Expanded the content of the course by adding additional problems, debugging the handout code, devising better solutions and rewriting the automatic graders so they could scale to thousands of students.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Intern}{Paris, France}
+      {École Normale Supérieure - EHESS - Cognitive Machine Learning team}{Apr 2017 -- Aug 2017}
+      \resumeItemListStart
+          \item \small Designed hierarchical neural architectures on logical reasoning tasks with PyTorch.
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineering Intern}{Paris, France}
+      {Theodo}{Jun 2016 - Sep 2016}
+      \resumeItemListStart
+        \item \small Developed a web application for a medical company using Symfony within an Agile team using Lean and Scrum
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------------
+\shorterSection{Publications}
+  \resumeSubHeadingListStart
+    \item[]\small{
+\hspace{-9pt}
+\faFile[regular]~
+\textbf{Conformal Language Modeling}, Under review
+}
+    \vspace{-5pt}
+    \item[]\small{
+\hspace{-9pt}
+\faFile[regular]~
+\textbf{Syfer: Neural Obfuscation for Private Data Release}, Preprint
+}
+    \vspace{-5pt}
+    \item[]\small{
+\hspace{-9pt}
+\faFile[regular]~
+\textbf{Automated Chemical Reaction Extraction from Scientific Literature}, Journal of Chemical Information and Modeling, 2021
+}
+    \vspace{-5pt}
+    \item[]\small{
+\hspace{-9pt}
+\faFile[regular]~
+\textbf{Blank Language Models}, Empirical Methods in Natural Language Processing, 2020
+}
+  \resumeSubHeadingListEnd
+
+% %-----------PROJECTS-----------------
+% \shorterSection{Projects}
+%   \resumeSubHeadingListStart
+%   \resumeSubItem{\href{https://github.com/varal7/blank_language_model}{\faGithub\hspace{0.5em}Blank Language Model (Pytorch)}} {Flexible sequence modeling by any-order generation}
+%   \resumeSubItem{\href{https://github.com/varal7/botafogo}{\faGithub\hspace{0.5em}Botafogo (CSS)}} {Responsive Wordpress theme for the ballroom dance team's website}
+%   \resumeSubItem{Kinder (TypeScript)} {Cloud-managed engine automating game actions through high-level scripts (MMORPG bots), 1000+ users.}
+%   \resumeSubItem{\href{https://github.com/varal7/ieturk}{\faGithub\hspace{0.5em}IE-Turk (jQuery)}} { (200+ stars) Annotation tool for information extraction and named entity recognition with Mechanical Turk}
+%   \resumeSubItem{\href{https://github.com/varal7/random_bst}{\faGithub\hspace{0.5em}Zip Trees benchmark (C++)}}{Implementation and benchmark of random binary search trees: skip lists, treaps and zip trees}
+%   \resumeSubItem{\href{https://github.com/varal7/autocomplete.bin}{\faGithub\hspace{0.5em}LDAP Autocomplete (Vue.js / Django)}}{Autocompletion service for easy signing up backed by queries to the BR's LDAP}
+%   \resumeSubItem{\href{https://github.com/varal7/opendata-ratp}{\faGithub\hspace{0.5em}OpenData RATP (PHP)}}{Demo for using WSDL format and SOAP protocol to query RATP's API}
+%   \resumeSubItem{\href{https://github.com/varal7/projet-aaa}{\faGithub\hspace{0.5em}Topological Data Analysis (D3.js / Python)}}{Visualization of the topological structure of NBA data using the Mapper Algorithm}
+%   \resumeSubItem{\href{https://github.com/BinetReseau/superette-khube}{\faGithub\hspace{0.5em}Cashier Web App (AngularJS / Django)}}{Cashier app for grocery's transactions, still in use at Polytechnique's local minimarket}
+%   \resumeSubHeadingListEnd
+
+
+%-----------TOOLBOX-----------------
+\shorterSection{Skills / ToolBox}
+  \resumeSubHeadingListStart
+  \small
+    \item{
+     \textbf{Languages}{: Python, C++, JavaScript, TypeScript, HTML}
+     \hfill
+     \textbf{Technologies}{: MacOs, Linux, vim, tmux, git, nginx, Docker}
+    }
+    \vspace{-5pt}
+    \item{
+     \textbf{Libraries}{: PyTorch, NumPy, Pandas, Scikit-Learn, Jupyter, Django, Flask, Vue.js, React}
+    }
+\resumeSubHeadingListEnd
+%-----------Awards-----------------
+\shorterSection{Leadership and Awards}
+  \resumeSubHeadingListStart
+    % \item[]\small{
+    %     {Placed 37/2306 at Battle Dev (France's top coding competition - 2017), President of Binet Réseau (Student association that provides SysAdmin services, training and support - 2015) \textbf{Bronze medal at the International Mathematical Olympiad} (IMO 2012), Second national prize in Mathematics (Concours Général - 2012),  Third national prize in Biology (Concours Général - 2012),  Regional Award in Physics (Concours Général - 2012), Bronze medal at the Balkan Mathematical Olympiad (BMO 2012), \textbf{Winner of the French Math Olympiads} (First National Prize at Olympiades Académiques de Mathématiques - 2011)  \vspace{-6pt}}
+    % }
+\item\small {Bronze Medal at the International Mathematical Olympiad (IMO 2012)}
+    \vspace{-5pt}
+\item\small {Second National Prize in Mathematics (Concours Général 2012)}
+    \vspace{-5pt}
+\item\small {Third National Prize in Life and Earth Sciences (Concours Général 2012)}
+    \vspace{-5pt}
+\item\small {Regional Award in Physics (Concours Général 2012)}
+    \vspace{-5pt}
+\item\small {Bronze Medal at the Balkan Mathematical Olympiad (BMO 2012)}
+    \vspace{-5pt}
+\item\small {First National Prize at French Math Olympiads (Olympiades Académiques de Mathématiques 2011)}
+  \resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}
