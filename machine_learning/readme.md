@@ -14,7 +14,7 @@ Large language models largely represent a class of deep learning architectures c
 A transformer model is a neural network that learns context and meaning by tracking relationships in sequential data, like the words in this sentence.
 * Llama (language model):  
 Llama is a family of autoregressive large language models released by Meta AI starting in February 2023.  
-How Transformers Work:   https://towardsdatascience.com/transformers-141e32e69591
+* How Transformers Work:   https://towardsdatascience.com/transformers-141e32e69591
   
 --- 
 DAIR.AI  
