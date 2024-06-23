@@ -1,15 +1,3 @@
-DAIR.AI  
-Democratizing Artificial Intelligence Research, Education, and Technologies  https://github.com/dair-ai   
-ML Papers of The Week:   https://github.com/dair-ai/ML-Papers-of-the-Week      
-Machine Learning Course Notes:  https://github.com/dair-ai/ML-Course-Notes  
-ML-YouTube-Courses:  https://github.com/dair-ai/ML-YouTube-Courses     
-
----
-Kaggle codebase:  https://www.kaggle.com/models?tfhub-redirect=true&query=bert  
-![image](https://github.com/GinChoYen/Anthony/assets/22329486/e6f10d68-8f08-4bac-a078-938bac844684)  
-
----
-
 machine learning study plan:   
 1. Learn about NLP  
 2. Learn about Transformers, LSTMs, LLMs  
@@ -28,7 +16,19 @@ A transformer model is a neural network that learns context and meaning by track
 Llama is a family of autoregressive large language models released by Meta AI starting in February 2023.  
 How Transformers Work:   https://towardsdatascience.com/transformers-141e32e69591
   
+--- 
+DAIR.AI  
+Democratizing Artificial Intelligence Research, Education, and Technologies  https://github.com/dair-ai   
+ML Papers of The Week:   https://github.com/dair-ai/ML-Papers-of-the-Week      
+Machine Learning Course Notes:  https://github.com/dair-ai/ML-Course-Notes  
+ML-YouTube-Courses:  https://github.com/dair-ai/ML-YouTube-Courses     
+
 ---
+Kaggle codebase:  https://www.kaggle.com/models?tfhub-redirect=true&query=bert  
+![image](https://github.com/GinChoYen/Anthony/assets/22329486/e6f10d68-8f08-4bac-a078-938bac844684)  
+
+---
+
 1. Learn about NLP  
 Machine Learning Tutorial:  https://www.geeksforgeeks.org/machine-learning/    
 A Step-by-Step NLP Machine Learning Classifier Tutorial  https://builtin.com/machine-learning/nlp-machine-learning  
