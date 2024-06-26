@@ -3,6 +3,11 @@ https://www.bilibili.com/video/BV1f7411d7rP?p=2
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/6c404368-1354-4ee9-8fb1-1eae4fc31280)  
 
 ---
+Engineering Drawing Tutorials / Orthographic Drawing with Sectional Front & Side view (T 7.2A)  
+https://www.youtube.com/watch?v=fQNwVo2hWU4
+![image](https://github.com/GinChoYen/Anthony/assets/22329486/7e31436d-c3c9-46aa-9996-53b0cf91abf3)
+
+---
 Lecture 4 Orthographic Projections | Part 1 [Engineering Drawing]  
 https://www.youtube.com/watch?v=w0uPXLxV8f4&ab_channel=EngineeringWorld
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/03eb2305-4696-43b2-83fe-2cf13cc36dc0)
