@@ -8,6 +8,11 @@ https://www.bilibili.com/video/BV1FA411i7v4?p=4
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/27616d4c-3991-4d9e-93d6-4d7985309f1e)
 
 ---
+机械制图习题集第七版P18-345
+https://www.bilibili.com/video/BV1zt4y1T7LN/?spm_id_from=333.788.recommend_more_video.4 
+![image](https://github.com/GinChoYen/Anthony/assets/22329486/e4d465c8-a322-4a97-9dfd-6a6e3b00d4f5)  
+
+---
 Engineering Drawing Tutorials / Orthographic Drawing with Sectional Front & Side view (T 7.2A)  
 https://www.youtube.com/watch?v=fQNwVo2hWU4
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/7e31436d-c3c9-46aa-9996-53b0cf91abf3)
