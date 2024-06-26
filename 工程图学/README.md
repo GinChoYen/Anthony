@@ -20,3 +20,7 @@ https://www.bilibili.com/video/BV1JF411i7Ro/?spm_id_from=333.337.search-card.all
 MIT OPENCOURSE ware
 https://ocw.mit.edu/courses/2-007-design-and-manufacturing-i-spring-2009/pages/related-resources/drawing_and_sketching/
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/371bd204-9022-4953-8f07-3073201abc10)
+
+---
+https://www.youtube.com/watch?v=MEpDMCT_HLQ&ab_channel=DrJojiThomas  
+Projections of a sectioned hexagonal prism
