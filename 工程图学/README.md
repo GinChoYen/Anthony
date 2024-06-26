@@ -24,3 +24,9 @@ https://ocw.mit.edu/courses/2-007-design-and-manufacturing-i-spring-2009/pages/r
 ---
 https://www.youtube.com/watch?v=MEpDMCT_HLQ&ab_channel=DrJojiThomas  
 Projections of a sectioned hexagonal prism
+
+---
+https://www.youtube.com/watch?v=Hna4V7-FJ08&ab_channel=SolidWorksTutorial%E2%98%BA
+![image](https://github.com/GinChoYen/Anthony/assets/22329486/9c3be3c8-efd0-4c50-8101-622486bc2fe8)  
+
+
