@@ -7,6 +7,11 @@ Lecture 4 Orthographic Projections | Part 1 [Engineering Drawing]
 https://www.youtube.com/watch?v=w0uPXLxV8f4&ab_channel=EngineeringWorld
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/03eb2305-4696-43b2-83fe-2cf13cc36dc0)
 
+---
+ORTHOGRAPHIC PROJECTION IN ENGINEERING DRAWING  
+https://www.youtube.com/watch?v=L8lAt5FT-3A&ab_channel=ReferenceBook
+![image](https://github.com/GinChoYen/Anthony/assets/22329486/0f820ea8-3e28-4dba-b5ce-73d026a55f62)
+
 ---  
 制图课程  
 https://search.bilibili.com/all?vt=36545048&from_source=webcommentline_search&keyword=%E5%88%B6%E5%9B%BE%E8%AF%BE%E7%A8%8B  
