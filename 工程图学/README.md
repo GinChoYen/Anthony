@@ -7,13 +7,16 @@ https://www.bilibili.com/video/BV1f7411d7rP?p=2
 ---
 机械制图习题集第七版P24-7（刘斌）  
 https://www.bilibili.com/video/BV1ce4y1v7FD/?spm_id_from=333.788.recommend_more_video.7  
-![image](https://github.com/GinChoYen/Anthony/assets/22329486/97dfc60a-b315-4c57-adc2-6f610a13717e)
+![image](https://github.com/GinChoYen/Anthony/assets/22329486/97dfc60a-b315-4c57-adc2-6f610a13717e)  
 
 ---
-【清华大学】机械制图 58集全 9.1万 29 (very high )
-
+【清华大学】机械制图 58集全 9.1万 29 (very high )  
 https://www.bilibili.com/video/BV1FA411i7v4?p=4  
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/27616d4c-3991-4d9e-93d6-4d7985309f1e)
+
+---
+mcgill.ca engineeringdesign  https://www.mcgill.ca/engineeringdesign/step-step-design-process/basics-graphics-communication/projections-and-views  
+![image](https://github.com/GinChoYen/Anthony/assets/22329486/7f387a05-3433-49ca-b708-db425caa416b)  
 
 ---
 机械制图习题集第七版P18-345
