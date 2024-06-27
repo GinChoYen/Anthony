@@ -19,6 +19,10 @@ mcgill.ca engineeringdesign  https://www.mcgill.ca/engineeringdesign/step-step-d
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/7f387a05-3433-49ca-b708-db425caa416b)  
 
 ---
+https://www.iitg.ac.in/kpmech/ME111-2016/ORTHOGRAPHIC%20PROJECTIONS-1%20(2016).pdf
+![image](https://github.com/GinChoYen/Anthony/assets/22329486/13b3a947-78de-4262-b860-dcafda695fc5)  
+
+---
 机械制图习题集第七版P18-345
 https://www.bilibili.com/video/BV1zt4y1T7LN/?spm_id_from=333.788.recommend_more_video.4 
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/e4d465c8-a322-4a97-9dfd-6a6e3b00d4f5)  
