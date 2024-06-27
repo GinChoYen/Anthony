@@ -6,7 +6,7 @@ https://www.bilibili.com/video/BV1f7411d7rP?p=2
 机械制图习题集第七版P24-7（刘斌）  
 https://www.bilibili.com/video/BV1ce4y1v7FD/?spm_id_from=333.788.recommend_more_video.7  
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/97dfc60a-b315-4c57-adc2-6f610a13717e)
-https://www.bilibili.com/read/cv12955416/?jump_opus=1 
+【工程图学】天津大学  https://www.bilibili.com/read/cv12955416/?jump_opus=1 
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/a24ce698-2e87-4111-b853-3741a9e50913)  
 
 ---
