@@ -1,0 +1,6 @@
+DAVID L. POOLE & ALAN K. MACKWORTH
+ARTIFICIAL
+INTELLIGENCE 3E  
+https://artint.info/  
+
+---
