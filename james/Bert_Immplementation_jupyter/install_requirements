@@ -1,0 +1,10 @@
+(.venv) PS C:\2024\Bert_Immplementation_jupyter> history
+
+  Id CommandLine
+  -- -----------
+   1  python.exe -m pip install --upgrade pip
+   2 pip install transformers
+   3 pip install pandas
+   4 pip install torch
+   5 pip install scikit-learn
+   7 pip install matplotlib
