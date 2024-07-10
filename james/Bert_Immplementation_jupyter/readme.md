@@ -4,3 +4,5 @@ https://gist.github.com/samk3211/1d233b29ce5acc93f4a3e8c13db8ccd3  ](https://git
 
 ---
 Set the breakpoints in the selected cell and press Alt + Shift + Enter for Windows or ⌥⇧⏎ for macOS. Alternatively, you can right-click the cell and select Debug Cell from the context menu. The Jupyter Notebook Debugger tool window opens. Debugging is performed within a single code cell.  
+![image](https://github.com/GinChoYen/Anthony/assets/22329486/39b90fc5-00df-4570-8ee7-96995a150289)
+
