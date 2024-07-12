@@ -1,3 +1,5 @@
+https://github.com/Crone1/Movie-Review-Sentiment-Classification-Using-BERT  
+
 # Overview
 This repository contains the work I did in using a BERT transformer for classification of movie review sentiment.
 It also attempts to compare this transformer model to more traditional machine learning models looking at the strengths and weaknesses of these models along with their similarities and differences. This builds on from work I did in my repository on [movie sentiment analysis using sklearn models](https://github.com/Crone1/Movie-Review-Sentiment-Classification-Using-Sklearn).
