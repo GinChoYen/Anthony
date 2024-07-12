@@ -9,6 +9,18 @@ Ensure that the environment variables for CUDA are set correctly. Add the follow
 
     C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.x\bin  
     C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.x\libnvvp  
+Example Python Script to Check Installation  
+import torch  
+import random  
+import numpy as np  
+SEED = 1234  
+random.seed(SEED)  
+np.random.seed(SEED)  
+torch.manual_seed(SEED)  
+torch.backends.cudnn.deterministic = True  
+print(f"CUDA available: {torch.cuda.is_available()}")  
+print(f"CUDA version: {torch.version.cuda}")  
+print(f"cuDNN version: {torch.backends.cudnn.version()}")      
 ![image](https://github.com/user-attachments/assets/b24c6d62-9eaf-4a4e-b385-afc8e8695309)
 
 
