@@ -1,4 +1,4 @@
-https://github.com/GinChoYen/Anthony/blob/main/james/Movie-Review-Sentiment-Classification-Using-BERT-master/bert_movie_sentiment_analysis.ipynb  
+https://github.com/Crone1/Movie-Review-Sentiment-Classification-Using-BERT  
 
 # Overview
 This repository contains the work I did in using a BERT transformer for classification of movie review sentiment.
