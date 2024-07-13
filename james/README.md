@@ -7,6 +7,8 @@ NEED below two files:
 ![image](https://github.com/user-attachments/assets/d51d4c24-ee93-446a-913c-5447d048d6a0)
 
 Update Environment Variables:  
+![image](https://github.com/user-attachments/assets/d9e07292-22ef-4c62-b58e-a27040bbc56a)
+
 Ensure that the environment variables for CUDA are set correctly. Add the following paths to your system environment variables:  
 
     C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.x\bin  
