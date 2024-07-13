@@ -3,6 +3,8 @@ Download and install the CUDA Toolkit from the NVIDIA CUDA Toolkit download page
 
 Install cuDNN:  
 Download cuDNN from the NVIDIA cuDNN download page. Follow the installation instructions to place the cuDNN files in the CUDA Toolkit directory.  https://developer.nvidia.com/cudnn-downloads  
+NEED below two files:  
+![image](https://github.com/user-attachments/assets/d51d4c24-ee93-446a-913c-5447d048d6a0)
 
 Update Environment Variables:  
 Ensure that the environment variables for CUDA are set correctly. Add the following paths to your system environment variables:  
