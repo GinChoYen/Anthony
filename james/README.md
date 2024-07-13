@@ -8,6 +8,7 @@ NEED below two files:
 
 Update Environment Variables:  
 ![image](https://github.com/user-attachments/assets/d9e07292-22ef-4c62-b58e-a27040bbc56a)
+![image](https://github.com/user-attachments/assets/2c0f10a2-8834-4e78-9c8d-ef27ea31e0be)  
 
 Ensure that the environment variables for CUDA are set correctly. Add the following paths to your system environment variables:  
 
