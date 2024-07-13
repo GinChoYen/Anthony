@@ -21,6 +21,10 @@ torch.backends.cudnn.deterministic = True
 print(f"CUDA available: {torch.cuda.is_available()}")  
 print(f"CUDA version: {torch.version.cuda}")  
 print(f"cuDNN version: {torch.backends.cudnn.version()}")      
+OUTPUT:  
+CUDA available: True   
+CUDA version: 11.1    
+cuDNN version: 8005   
 ![image](https://github.com/user-attachments/assets/b24c6d62-9eaf-4a4e-b385-afc8e8695309)
 
 
