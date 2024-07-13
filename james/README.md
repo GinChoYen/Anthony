@@ -16,7 +16,8 @@ Ensure that the environment variables for CUDA are set correctly. Add the follow
     C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.x\libnvvp  
 Check CUDA Installation:  
  nvcc --version  
-
+ nvidia-smi  
+ 
 Example Python Script to Check Installation  
 import torch  
 import random  
