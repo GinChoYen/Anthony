@@ -2,6 +2,7 @@ I setup by enviroment by the following way. Need to check for GPU
 1. python -m pip install --upgrade pip
 2. python-3.10.11-amd64  python C:\Users\bonni\AppData\Local\Programs\Python\Python310
 3. using the ide install each needed packages  
+![image](https://github.com/user-attachments/assets/03e8f373-b265-463e-a2bd-67e73f906040)
 
 
 # BERT-SJTU-NLU2023
