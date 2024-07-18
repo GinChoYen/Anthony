@@ -3,7 +3,12 @@ I setup by enviroment by the following way. Need to check for GPU
 2. python-3.10.11-amd64  python C:\Users\bonni\AppData\Local\Programs\Python\Python310
 3. using the ide install each needed packages
 running bert.py  takes long time:  
-![image](https://github.com/user-attachments/assets/03e8f373-b265-463e-a2bd-67e73f906040)
+![image](https://github.com/user-attachments/assets/03e8f373-b265-463e-a2bd-67e73f906040)  
+-Use nvidia-smi:  
+-Monitor GPU usage during training:
+watch -n 1 nvidia-smi  
+
+![image](https://github.com/user-attachments/assets/2b7fed2e-c4ed-4416-a153-8db0ecc9c109)
 
 
 # BERT-SJTU-NLU2023
