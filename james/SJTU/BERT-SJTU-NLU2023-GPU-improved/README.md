@@ -1,3 +1,16 @@
+
+![image](https://github.com/user-attachments/assets/d63280c0-7f8d-4f2d-8986-53fe946bc5f5)
+ 67%|██████▋   | 2/3 [00:00<00:00,  5.85it/s]Batch 2 is on device: cuda:0
+Allocated: 2.1 GB
+Reserved: 4.5 GB
+100%|██████████| 3/3 [00:00<00:00,  7.13it/s]
+100%|██████████| 1/1 [00:00<00:00, 11.63it/s]
+
+Epoch 8 Fold 4 complete! Validation Loss : 3.6061508655548096
+Validation loss decreased (3.681077 --> 3.606151).  Saving model ...
+The model has been saved in models/bert_val_loss_3.49169_ep_8.pt
+-----
+
 I setup by enviroment by the following way. Need to check for GPU 
 1. python -m pip install --upgrade pip
 2. python-3.10.11-amd64  python C:\Users\bonni\AppData\Local\Programs\Python\Python310
