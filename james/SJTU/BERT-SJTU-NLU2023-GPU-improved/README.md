@@ -6,9 +6,10 @@ Reserved: 4.5 GB
 100%|██████████| 3/3 [00:00<00:00,  7.13it/s]
 100%|██████████| 1/1 [00:00<00:00, 11.63it/s]
 
-Epoch 8 Fold 4 complete! Validation Loss : 3.6061508655548096
-Validation loss decreased (3.681077 --> 3.606151).  Saving model ...
-The model has been saved in models/bert_val_loss_3.49169_ep_8.pt
+Epoch 8 Fold 4 complete! Validation Loss : 3.6061508655548096  
+Validation loss decreased (3.681077 --> 3.606151).  Saving model ...  
+The model has been saved in models/bert_val_loss_3.49169_ep_8.pt  
+
 -----
 
 I setup by enviroment by the following way. Need to check for GPU 
