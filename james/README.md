@@ -42,3 +42,5 @@ https://github.com/Abhishekjl/Sentiment-analyis-BERT-Trained-/tree/master
 ![image](https://github.com/GinChoYen/Anthony/assets/22329486/0d531acb-1fc6-439b-9619-3fa24a1d4c5b)
 
 
+--- SJTU Bert example debug  
+![image](https://github.com/user-attachments/assets/7a495c56-6617-48b5-8f13-5aacb7747821)
