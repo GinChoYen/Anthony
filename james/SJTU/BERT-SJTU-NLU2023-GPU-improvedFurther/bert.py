@@ -1,16 +1,17 @@
-import torch
-import torch.nn as nn
-import os
-import random
-import numpy as np
-import pandas as pd
-import copy
-from torch.utils.data import DataLoader, Dataset
-from torch.cuda.amp import autocast, GradScaler
-from tqdm import tqdm
-from transformers import (AutoTokenizer, AutoConfig, AutoModelForSequenceClassification, get_linear_schedule_with_warmup)
-from sklearn.model_selection import KFold
-from torch.optim import AdamW
+import torch  # Import PyTorch library for tensor operations and deep learning, including building and training neural networks, performing automatic differentiation, and leveraging GPU acceleration.
+import torch.nn as nn  # Import PyTorch's neural network module for creating and managing neural network layers, loss functions, and optimization routines.
+import os  # Import OS module for interacting with the file system, handling file paths, and accessing environment variables.
+import random  # Import random module for generating random numbers, making random choices, and performing random shuffling.
+import numpy as np  # Import NumPy for numerical operations, handling large multi-dimensional arrays, and performing mathematical computations.
+import pandas as pd  # Import Pandas for data manipulation and analysis, including dataframes for structured data and various data processing functions.
+import copy  # Import copy module for creating deep and shallow copies of objects to avoid modifying the original object.
+from torch.utils.data import DataLoader, Dataset  # Import DataLoader for batching, shuffling, and parallel loading of data, and Dataset for defining custom data sources.
+from torch.cuda.amp import autocast, GradScaler  # Import utilities for automatic mixed precision to reduce memory usage and accelerate training by managing floating-point precision.
+from tqdm import tqdm  # Import tqdm for displaying progress bars during loops and iterations to monitor progress in a user-friendly manner.
+from transformers import (AutoTokenizer, AutoConfig, AutoModelForSequenceClassification, get_linear_schedule_with_warmup)  # Import tools from Hugging Face Transformers for natural language processing tasks, including tokenization, model configuration, sequence classification, and learning rate scheduling.
+from sklearn.model_selection import KFold  # Import KFold for performing cross-validation to assess the performance of machine learning models and ensure generalization.
+from torch.optim import AdamW  # Import AdamW optimizer for adaptive learning rate optimization, incorporating weight decay to improve model performance.
+
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"  # Disable parallelism in tokenizers
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:128"  # Configure max split size for CUDA allocations
@@ -127,6 +128,7 @@ class bert:
     def print_gpu_utilization(self):
         print(f"Allocated: {torch.cuda.memory_allocated() / 1024 ** 3:.1f} GB")  # Print allocated GPU memory
         print(f"Reserved: {torch.cuda.memory_reserved() / 1024 ** 3:.1f} GB")  # Print reserved GPU memory
+
 
     def step(self, dataset, bs, device):
         best_loss = np.inf  # Initialize best loss
