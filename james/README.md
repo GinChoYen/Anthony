@@ -1,3 +1,9 @@
+machine learning study plan:   
+1. Learn about NLP  
+2. Learn about Transformers, LSTMs, LLMs  
+3. Hands-on Transformers (BERT), LSTMs, LLMs (llama)
+---
+
 Install CUDA Toolkit:  
 Download and install the CUDA Toolkit from the NVIDIA CUDA Toolkit download page.  https://developer.nvidia.com/cuda-downloads  
 
