@@ -15,7 +15,9 @@ The model is saving the state when validation loss improves, ensuring the best m
 Overall, the log shows that the training process is functioning as expected, with batches being processed correctly, validation loss decreasing, and model checkpoints being saved. If there are specific areas or details you would like to verify or if you need further assistance, please let me know!
 
 ---
-
+C:\2024-movie\BERT-SJTU-NLU2023-main\venv\Scripts\python.exe "C:/Program Files/JetBrains/PyCharm 2023.1.6/plugins/python/helpers/pydev/pydevconsole.py" --mode=client --host=127.0.0.1 --port=50207 
+  import sys; print('Python %s on %s' % (sys.version, sys.platform))  
+  sys.path.extend(['C:\\2024-movie\\BERT-SJTU-NLU2023-main'])  
 C:\2024-movie\BERT-SJTU-NLU2023-main\venv\Scripts\python.exe "C:/Program Files/JetBrains/PyCharm 2023.1.6/plugins/python/helpers/pydev/pydevconsole.py" --mode=client --host=127.0.0.1 --port=50207 
   import sys; print('Python %s on %s' % (sys.version, sys.platform))
   sys.path.extend(['C:\\2024-movie\\BERT-SJTU-NLU2023-main'])
