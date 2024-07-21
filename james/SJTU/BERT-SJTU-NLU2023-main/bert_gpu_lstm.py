@@ -12,7 +12,6 @@ from transformers import (AutoTokenizer, AutoConfig, AutoModelForSequenceClassif
 from sklearn.model_selection import KFold  # Import KFold for performing cross-validation to assess the performance of machine learning models and ensure generalization.
 from torch.optim import AdamW  # Import AdamW optimizer for adaptive learning rate optimization, incorporating weight decay to improve model performance.
 
-
 os.environ["TOKENIZERS_PARALLELISM"] = "false"  # Disable parallelism in tokenizers
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:128"  # Configure max split size for CUDA allocations
 
@@ -88,6 +87,21 @@ class CustomDataset(Dataset):
         else:
             return token_ids, attn_masks, token_type_ids  # Return inputs
 
+class CustomBertModel(nn.Module):
+    def __init__(self, bert_model, num_labels):
+        super(CustomBertModel, self).__init__()
+        self.bert = AutoModelForSequenceClassification.from_pretrained(bert_model, num_labels=num_labels)
+        self.lstm = nn.LSTM(input_size=self.bert.config.hidden_size, hidden_size=256, num_layers=1, batch_first=True, bidirectional=True)
+        self.classifier = nn.Linear(256*2, num_labels)
+
+    def forward(self, input_ids, attention_mask, token_type_ids):
+        outputs = self.bert.bert(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
+        sequence_output, pooled_output = outputs.last_hidden_state, outputs.pooler_output
+        lstm_output, _ = self.lstm(sequence_output)
+        lstm_output = lstm_output[:, -1, :]
+        logits = self.classifier(lstm_output)
+        return logits
+
 def set_seed(seed):
     torch.manual_seed(seed)  # Set random seed for torch
     torch.cuda.manual_seed_all(seed)  # Set random seed for all CUDA devices
@@ -107,7 +121,7 @@ def evaluate_loss(model, device, criterion, dataloader):
             seq, attn_masks, token_type_ids, labels = \
                 seq.to(device), attn_masks.to(device), token_type_ids.to(device), labels.to(device)  # Move inputs to device
             outputs = model(input_ids=seq, attention_mask=attn_masks, token_type_ids=token_type_ids)  # Forward pass
-            mean_loss += criterion(outputs.logits, labels).item()  # Calculate loss
+            mean_loss += criterion(outputs, labels).item()  # Calculate loss
             count += 1  # Increment count
     return mean_loss / count  # Return mean loss
 
@@ -128,7 +142,6 @@ class bert:
     def print_gpu_utilization(self):
         print(f"Allocated: {torch.cuda.memory_allocated() / 1024 ** 3:.1f} GB")  # Print allocated GPU memory
         print(f"Reserved: {torch.cuda.memory_reserved() / 1024 ** 3:.1f} GB")  # Print reserved GPU memory
-
 
     def step(self, dataset, bs, device):
         best_loss = np.inf  # Initialize best loss
@@ -159,7 +172,7 @@ class bert:
 
                     with autocast():
                         outputs = self.model(seq, attn_masks, token_type_ids)  # Forward pass with mixed precision
-                        loss = self.criterion(outputs.logits, labels)  # Calculate loss
+                        loss = self.criterion(outputs, labels)  # Calculate loss
                         loss = loss / self.gradient_accumulation_steps  # Normalize loss
 
                     if self.fp16:
@@ -223,8 +236,7 @@ def main():
     criterion = nn.CrossEntropyLoss()  # Define loss criterion
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # Set device
 
-    config = AutoConfig.from_pretrained(bert_model, num_labels=num_labels)  # Load model config
-    model = AutoModelForSequenceClassification.from_pretrained(bert_model, config=config)  # Load pre-trained model
+    model = CustomBertModel(bert_model, num_labels)  # Initialize custom model with LSTM
     model.to(device)  # Move model to device
 
     optimizer = AdamW(model.parameters(), lr=lr, weight_decay=1e-2)  # Define optimizer
