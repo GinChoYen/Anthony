@@ -1,22 +1,22 @@
-import torch  # Import PyTorch for tensor operations and deep learning
-import torch.nn as nn  # Import neural network module from PyTorch
-import os  # Import OS module for interacting with the file system
-import random  # Import random module for generating random numbers
-import numpy as np  # Import NumPy for numerical operations
-import pandas as pd  # Import Pandas for data manipulation
-import copy  # Import copy module for copying objects
-from torch.utils.data import DataLoader, Dataset  # Import DataLoader and Dataset for data handling
-from torch.cuda.amp import autocast, GradScaler  # Import for mixed precision training
-from tqdm import tqdm  # Import tqdm for progress bar
-from transformers import AutoTokenizer, get_linear_schedule_with_warmup  # Import tokenizer and scheduler from Hugging Face
-from sklearn.model_selection import KFold  # Import KFold for cross-validation
-from torch.optim import AdamW  # Import AdamW optimizer
+import torch  # Import PyTorch library for tensor operations and deep learning, including building and training neural networks, performing automatic differentiation, and leveraging GPU acceleration.
+import torch.nn as nn  # Import PyTorch's neural network module for creating and managing neural network layers, loss functions, and optimization routines.
+import os  # Import OS module for interacting with the file system, handling file paths, and accessing environment variables.
+import random  # Import random module for generating random numbers, making random choices, and performing random shuffling.
+import numpy as np  # Import NumPy for numerical operations, handling large multi-dimensional arrays, and performing mathematical computations.
+import pandas as pd  # Import Pandas for data manipulation and analysis, including dataframes for structured data and various data processing functions.
+import copy  # Import copy module for creating deep and shallow copies of objects to avoid modifying the original object.
+from torch.utils.data import DataLoader, Dataset  # Import DataLoader for batching, shuffling, and parallel loading of data, and Dataset for defining custom data sources.
+from torch.cuda.amp import autocast, GradScaler  # Import utilities for automatic mixed precision to reduce memory usage and accelerate training by managing floating-point precision.
+from tqdm import tqdm  # Import tqdm for displaying progress bars during loops and iterations to monitor progress in a user-friendly manner.
+from transformers import (AutoTokenizer, AutoConfig, AutoModelForSequenceClassification, get_linear_schedule_with_warmup)  # Import tools from Hugging Face Transformers for natural language processing tasks, including tokenization, model configuration, sequence classification, and learning rate scheduling.
+from sklearn.model_selection import KFold  # Import KFold for performing cross-validation to assess the performance of machine learning models and ensure generalization.
+from torch.optim import AdamW  # Import AdamW optimizer for adaptive learning rate optimization, incorporating weight decay to improve model performance.
 
-# Set environment variables for tokenization parallelism and CUDA configuration
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
-os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:128"
+os.environ["TOKENIZERS_PARALLELISM"] = "false"  # Disable parallelism in tokenizers
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:128"  # Configure max split size for CUDA allocations
 
 class EarlyStopping:
+    """Early stops the training if validation loss doesn't improve after a given patience."""
     def __init__(self, patience=7, verbose=False, delta=0):
         self.patience = patience  # Number of epochs to wait for improvement
         self.verbose = verbose  # Verbosity flag
@@ -50,10 +50,9 @@ class EarlyStopping:
         torch.save(model.state_dict(), 'finish_model.pkl')  # Save model state dictionary
         self.val_loss_min = val_loss  # Update minimum validation loss
 
-# The CustomDataset class prepares the input data for the LSTM model by tokenizing text data:
 class CustomDataset(Dataset):
     def __init__(self, data, maxlen, with_labels=True, bert_model='bert-base-uncased'):
-        self.data = data  # Load data
+        self.data = data  # pandas dataframe
         self.tokenizer = AutoTokenizer.from_pretrained(bert_model)  # Initialize tokenizer
         self.maxlen = maxlen  # Maximum sequence length
         self.with_labels = with_labels  # Flag to indicate if dataset has labels
@@ -64,6 +63,7 @@ class CustomDataset(Dataset):
             self.data = self.data[self.data['label'].apply(lambda x: str(x).isdigit())]  # Ensure labels are integers
 
         self.label_mapping = label_mapping  # Save label mapping
+
         print("Filtered dataset length:", len(self.data))  # Print filtered dataset length
 
     def __len__(self):
@@ -87,6 +87,21 @@ class CustomDataset(Dataset):
         else:
             return token_ids, attn_masks, token_type_ids  # Return inputs
 
+class CustomBertModel(nn.Module):
+    def __init__(self, bert_model, num_labels):
+        super(CustomBertModel, self).__init__()
+        self.bert = AutoModelForSequenceClassification.from_pretrained(bert_model, num_labels=num_labels)
+        self.lstm = nn.LSTM(input_size=self.bert.config.hidden_size, hidden_size=256, num_layers=1, batch_first=True, bidirectional=True)
+        self.classifier = nn.Linear(256*2, num_labels)
+
+    def forward(self, input_ids, attention_mask, token_type_ids):
+        outputs = self.bert.bert(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
+        sequence_output, pooled_output = outputs.last_hidden_state, outputs.pooler_output
+        lstm_output, _ = self.lstm(sequence_output)
+        lstm_output = lstm_output[:, -1, :]
+        logits = self.classifier(lstm_output)
+        return logits
+
 def set_seed(seed):
     torch.manual_seed(seed)  # Set random seed for torch
     torch.cuda.manual_seed_all(seed)  # Set random seed for all CUDA devices
@@ -105,31 +120,12 @@ def evaluate_loss(model, device, criterion, dataloader):
         for it, (seq, attn_masks, token_type_ids, labels) in enumerate(tqdm(dataloader)):
             seq, attn_masks, token_type_ids, labels = \
                 seq.to(device), attn_masks.to(device), token_type_ids.to(device), labels.to(device)  # Move inputs to device
-            outputs = model(seq, attn_masks, token_type_ids)  # Forward pass
+            outputs = model(input_ids=seq, attention_mask=attn_masks, token_type_ids=token_type_ids)  # Forward pass
             mean_loss += criterion(outputs, labels).item()  # Calculate loss
             count += 1  # Increment count
     return mean_loss / count  # Return mean loss
 
-# The LSTMClassifier class defines the LSTM architecture
-class LSTMClassifier(nn.Module):
-    def __init__(self, embedding_dim, hidden_dim, vocab_size, output_size, num_layers, bidirectional, dropout):
-        super(LSTMClassifier, self).__init__()
-        self.embedding = nn.Embedding(vocab_size, embedding_dim)  # Embedding layer
-        self.lstm = nn.LSTM(embedding_dim, hidden_dim, num_layers,
-                            bidirectional=bidirectional, dropout=dropout, batch_first=True)  # LSTM layer
-        self.dropout = nn.Dropout(dropout)  # Dropout layer
-        self.fc = nn.Linear(hidden_dim * 2 if bidirectional else hidden_dim, output_size)  # Fully connected layer
-
-    def forward(self, input_ids, attention_mask=None, token_type_ids=None):
-        embedded = self.embedding(input_ids)  # Get embeddings
-        lstm_out, _ = self.lstm(embedded)  # LSTM forward pass
-        pooled = torch.mean(lstm_out, 1)  # Pool the outputs
-        output = self.fc(self.dropout(pooled))  # Fully connected layer with dropout
-        return output  # Return the output
-
-
-# The LSTMTrainer class handles the training loop, where the LSTM model is trained
-class LSTMTrainer:
+class bert:
     def __init__(self, model, criterion, optimizer, scheduler, epochs,
                  gradient_accumulation_steps, early_stopping, fp16=True):
         self.early_stopping = early_stopping  # Early stopping object
@@ -166,6 +162,7 @@ class LSTMTrainer:
                     seq, attn_masks, token_type_ids, labels = \
                         seq.to(device, non_blocking=True), attn_masks.to(device, non_blocking=True), token_type_ids.to(device, non_blocking=True), labels.to(device, non_blocking=True)  # Move inputs to device
 
+                    # Debugging: Check if tensors are on CUDA
                     assert seq.is_cuda, "Sequence is not on CUDA"  # Check if sequence is on CUDA
                     assert attn_masks.is_cuda, "Attention masks are not on CUDA"  # Check if attention masks are on CUDA
                     assert token_type_ids.is_cuda, "Token type IDs are not on CUDA"  # Check if token type IDs are on CUDA
@@ -214,7 +211,7 @@ class LSTMTrainer:
             if self.early_stopping.early_stop:
                 print("Early Stopping!")  # Print early stopping
                 break
-        path_to_model = 'models/{}_val_loss_{}_ep_{}.pt'.format('lstm', round(best_loss, 5), best_ep)  # Define model path
+        path_to_model = 'models/{}_val_loss_{}_ep_{}.pt'.format('bert', round(best_loss, 5), best_ep)  # Define model path
         torch.save(net_copy.state_dict(), path_to_model)  # Save model state dictionary
         print("The model has been saved in {}".format(path_to_model))  # Print save path
 
@@ -222,6 +219,7 @@ class LSTMTrainer:
         torch.cuda.empty_cache()  # Empty CUDA cache
 
 def main():
+    # parameters
     maxlen = 128  # Maximum sequence length
     bert_model = "bert-base-uncased"  # BERT model
     bs = 16  # Batch size
@@ -238,15 +236,7 @@ def main():
     criterion = nn.CrossEntropyLoss()  # Define loss criterion
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # Set device
 
-    tokenizer = AutoTokenizer.from_pretrained(bert_model)  # Initialize tokenizer
-    vocab_size = tokenizer.vocab_size  # Get vocabulary size
-    embedding_dim = 128  # Embedding dimension
-    hidden_dim = 256  # Hidden dimension
-    num_layers = 2  # Number of LSTM layers
-    bidirectional = True  # Use bidirectional LSTM
-    dropout = 0.3  # Dropout rate
-
-    model = LSTMClassifier(embedding_dim, hidden_dim, vocab_size, num_labels, num_layers, bidirectional, dropout)  # Initialize LSTM model
+    model = CustomBertModel(bert_model, num_labels)  # Initialize custom model with LSTM
     model.to(device)  # Move model to device
 
     optimizer = AdamW(model.parameters(), lr=lr, weight_decay=1e-2)  # Define optimizer
@@ -259,7 +249,7 @@ def main():
     t_total = int((len(dataset) * 0.8) // iters_to_accumulate) * epochs  # Calculate total training steps
     lr_scheduler = get_linear_schedule_with_warmup(optimizer=optimizer, num_warmup_steps=num_warmup_steps, num_training_steps=t_total)  # Define learning rate scheduler
 
-    trainer = LSTMTrainer(model, criterion, optimizer, lr_scheduler, epochs, iters_to_accumulate, early_stopping)  # Initialize trainer
+    trainer = bert(model, criterion, optimizer, lr_scheduler, epochs, iters_to_accumulate, early_stopping)  # Initialize trainer
 
     try:
         test_loader = DataLoader(dataset, batch_size=bs, num_workers=0, pin_memory=True)  # Initialize test DataLoader
