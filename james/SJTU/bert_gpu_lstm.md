@@ -15254,3 +15254,4 @@ Reserved: 3.6 GB
 Epoch 10 Fold 4 complete! Validation Loss : 1.7277302026748658
 Validation loss decreased (1.855034 --> 1.727730).  Saving model ...
 The model has been saved in models/bert_val_loss_1.60261_ep_10.pt
+
