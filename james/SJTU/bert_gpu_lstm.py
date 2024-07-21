@@ -127,6 +127,7 @@ class LSTMClassifier(nn.Module):
         output = self.fc(self.dropout(pooled))  # Fully connected layer with dropout
         return output  # Return the output
 
+
 # The LSTMTrainer class handles the training loop, where the LSTM model is trained
 class LSTMTrainer:
     def __init__(self, model, criterion, optimizer, scheduler, epochs,
